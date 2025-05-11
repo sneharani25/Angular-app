@@ -1,0 +1,10 @@
+<button class="btn btn-primary" (click)="togglePara()">Display Details</button>
+<p *ngIf="displayButton">Hey, what's up. I'm there</p>
+<!-- <p *ngFor="let item of buttonClicked">button Clicked Array: 
+    {{item}}
+</p> -->
+
+<ul *ngFor="let item of buttonClicked" [ngStyle]="{backgroundColor : item>4 ? 'blue' : 'transparent'}" 
+    [ngClass]="{'colorWhite' : item>4}">
+    <li>{{item}}</li>
+</ul>
